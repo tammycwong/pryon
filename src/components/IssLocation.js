@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Login() {
+export default function IssLocation() {
     return (
         <div>
-            <h1>Login</h1>
+            <h1>ISS Location</h1>
         </div>
     )
 }
