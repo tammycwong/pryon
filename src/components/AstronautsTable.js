@@ -7,8 +7,8 @@ export default function AstronautsTable({astronaut}) {
         <table className="app-container">
             <thead className="header">
                 <tr>
-                    <th>Name</th>
-                    <th>Craft</th>
+                    {/* <th>Name</th>
+                    <th>Craft</th> */}
                 </tr>
             </thead>
 
