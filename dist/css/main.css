@@ -28,12 +28,50 @@ tr:nth-child(even) {
 body {
   margin: 0;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 img {
-  position: center fixed;
+  position: center;
   background-size: cover;
   width: 100%;
+  opacity: 1;
+}
+
+.overlay {
+  top: 10rem;
+  left: 10rem;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 50vw;
+  text-align: center;
+}
+
+button {
+  border-radius: 8px;
+  width: 7rem;
+  height: 3rem;
+}
+
+h1 {
+  font-size: 4rem;
+  position: relative;
+  line-height: 4.5rem;
+  z-index: 15;
+  text-align: left;
+  position: fixed;
+  color: white;
 }
 
 .menu {
@@ -59,7 +97,7 @@ a {
   padding: 30px;
   text-decoration: none;
   font-size: 13pt;
-  color: gray;
+  color: white;
 }
 
 a:hover {
@@ -114,6 +152,6 @@ a:hover {
 }
 
 * {
-  font-family: arial;
+  font-family: Helvetica;
 }
 /*# sourceMappingURL=main.css.map */
