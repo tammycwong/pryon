@@ -4,11 +4,11 @@ export default function AstronautsTable({astronaut}) {
     const {name, craft} = astronaut;
 
     return (
-        <table className="app-container">
+        <table className="table-container">
             <thead className="header">
                 <tr>
-                    {/* <th>Name</th>
-                    <th>Craft</th> */}
+                    <th>Name</th>
+                    <th>Craft</th>
                 </tr>
             </thead>
 

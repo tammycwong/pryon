@@ -1,0 +1,119 @@
+.table-container {
+  margin: 5rem;
+}
+
+table {
+  border-collapse: collapse;
+  background: white;
+  width: 65vw;
+}
+
+th,
+td {
+  text-align: left;
+  font-size: 1.3rem;
+  height: 70px;
+}
+
+th {
+  background-color: #30313d;
+  color: white;
+  border: none;
+}
+
+tr:nth-child(even) {
+  background: #eeeeee;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img {
+  position: center fixed;
+  background-size: cover;
+  width: 100%;
+}
+
+.menu {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 15;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: right;
+}
+
+a {
+  padding: 30px;
+  text-decoration: none;
+  font-size: 13pt;
+  color: gray;
+}
+
+a:hover {
+  color: lightgray;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.98;
+}
+
+.form-container {
+  margin: 0 auto;
+  padding: 0 auto;
+  text-align: center;
+}
+
+.form-container h1 {
+  font-size: 36pt;
+  padding-top: 100px;
+}
+
+.form-container.login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+}
+
+.form-container input {
+  margin-bottom: 20px;
+  width: 40vw;
+  height: 5vh;
+  outline: none;
+}
+
+.form-container input[type=submit] {
+  width: 10vw;
+  border-radius: 8px;
+}
+
+* {
+  font-family: arial;
+}
+/*# sourceMappingURL=main.css.map */

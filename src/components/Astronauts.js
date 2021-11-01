@@ -18,7 +18,7 @@ export default function Astronauts() {
     console.log(astronauts.people);
 
   return (
-    <div>
+    <div className="">
       {hasError && <p>Something went wrong</p>}
       {isLoading ? (
         <p>Loading...</p>

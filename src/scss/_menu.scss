@@ -1,0 +1,31 @@
+.menu {
+    align-items: center;
+    z-index: 15;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: right;
+}
+a {
+    padding: 30px;
+    text-decoration: none;
+    font-size: 13pt;
+    color: gray;
+
+
+    &:hover {
+        color:lightgray;
+    }
+}
+.logo {
+    width: 50px;
+    height: auto;
+}
+.links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    opacity: 0.98;
+}
