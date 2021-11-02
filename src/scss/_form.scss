@@ -1,26 +1,33 @@
+// .form-container {
+//   margin: 0 auto;
+//   padding: 0 auto;
+//   text-align: center;
+//   background: black;
+// }
 .form-container {
-    margin: 0 auto;
-    padding: 0 auto;
-    text-align: center;
-
-    & h1 {
-        font-size: 36pt;
-        padding-top: 100px;
-    }
-    &.login-form {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-    }
-    & input {
-        margin-bottom: 20px;
-        width: 40vw;
-        height: 5vh;
-        outline: none;
-    }
-    & input[type=submit] {
-        width: 10vw;
-        border-radius: 8px;
-    }
+  z-index: 0;
 }
+//? form overlaps menu?
 
+h1 {
+  font-size: 36pt;
+  color: gray;
+}
+//needs className
+//overlaps ???
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+input {
+  margin-bottom: 20px;
+  width: 40vw;
+  height: 5vh;
+  outline: none;
+}
+input[type="submit"] {
+  width: 10vw;
+  border-radius: 8px;
+}

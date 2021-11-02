@@ -3,15 +3,19 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
 }
-img {
+// .banner {
+//     width: 500px;
+// }
+.astronaut {
   position: center;
   background-size: cover;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   opacity: 1;
 }
 .overlay {
   top: 10rem;
-  left: 10rem;
+  left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
@@ -20,22 +24,33 @@ img {
 .content {
   display: flex;
   flex-direction: row;
-  max-width: 50vw;
-  text-align: center;
-}
- 
-button {
-  border-radius: 8px;
-  width: 7rem;
-  height: 3rem;
+  // max-width: 50vw;
+
+  .title {
+    font-size: 4rem;
+    line-height: 4.5rem;
+    z-index: 15;
+    text-align: center;
+    position: fixed;
+    color: white;
+  }
 }
 
-h1 {
-  font-size: 4rem;
-  position: relative;
-  line-height: 4.5rem;
-  z-index: 15;
-  text-align: left;
-  position: fixed;
+button {
+  border-radius: 10px;
+  width: 7rem;
+  height: 3rem;
+  background: black;
   color: white;
+  border: none;
+  margin-left: 40px;
+  cursor: pointer;
 }
+// .title {
+//   font-size: 4rem;
+//   line-height: 4.5rem;
+//   z-index: 15;
+//   text-align: center;
+//   position: fixed;
+//   color: white;
+// }

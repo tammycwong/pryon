@@ -6,8 +6,7 @@ import Home from "./Home";
 import Astronauts from "./Astronauts";
 import IssLocation from "./IssLocation";
 import SignUp from "./SignUp";
-// import Welcome from "./Welcome";
-import image from "../images/logo.png"
+import image from "../images/main-logo.png"
 
 export default function Menu() {
   return (

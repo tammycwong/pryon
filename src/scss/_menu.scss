@@ -1,7 +1,5 @@
 .menu {
     align-items: center;
-    z-index: 15;
-    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -13,18 +11,20 @@ a {
     font-size: 13pt;
     color: white;
 
-
     &:hover {
         color:lightgray;
     }
 }
 .logo {
-    width: 50px;
+    width: 10rem;
+    padding-left: 1rem;
     height: auto;
+    position: fixed;
+    left: 0;
 }
 .links {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 3rem;
     left: 0;
     width: 100vw;
     opacity: 0.98;

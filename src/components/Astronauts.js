@@ -6,13 +6,25 @@ export default function Astronauts() {
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
 
-  useEffect(() => {
-    fetch("http://api.open-notify.org/astros.json")
-      .then((r) => r.json())
-      .then((data) => {
-        setAstronauts(data);
-      });
-  }, [setAstronauts]);
+  // useEffect(() => {
+  //   fetch("http://api.open-notify.org/astros.json")
+  //     .then((r) => r.json())
+  //     .then((data) => {
+  //       setAstronauts(data);
+  //     });
+  // }, [setAstronauts]);
+
+  const url = "http://api.open-notify.org/astros.json";
+
+  const userData = async () => {
+    const response = await fetch(url);
+    const astronauts = await response.json();
+    setAstronauts(astronauts);
+  };
+
+  useEffect(()=> {
+    userData();
+  })
 
     console.log(astronauts);
     console.log(astronauts.people);
