@@ -84,6 +84,7 @@ button {
 
 .menu {
   text-align: right;
+  background: black;
 }
 
 a {
@@ -115,6 +116,16 @@ a:hover {
 
 .profile-picture {
   width: 200px;
+  height: auto;
+}
+
+.map {
+  width: 100vw;
+  height: 100vh;
+}
+
+.pin-icon {
+  width: 40px;
   height: auto;
 }
 

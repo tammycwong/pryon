@@ -53,10 +53,6 @@ export default function Menu() {
           <Profile />
         </Route>
 
-        {/* <Route exact path="/login">
-          <Login />
-        </Route> */}
-
         <Route exact path="/astronauts">
           <Astronauts />
         </Route>

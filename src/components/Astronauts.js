@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-// import AstronautsTable from "./AstronautsTable";
+import IssLocation from "./IssLocation"
+
 
 export default function Astronauts() {
   const [astronauts, setAstronauts] = useState({});
@@ -14,30 +15,28 @@ export default function Astronauts() {
       });
   }, [setAstronauts]);
 
-  // console.log(astronauts);
-  // console.log(astronauts.people);
 
   if (isLoaded) {
     return (
-      <table className="">
+      <><table className="">
         <thead className="">
           <tr>
             <th>Name</th>
             <th>Craft</th>
           </tr>
-          </thead>
+        </thead>
 
-          <tbody>
-        {astronauts.people.map((astronaut) => {
-          return (
-            <tr>
-              <td>{astronaut.name}</td>
-              <td>{astronaut.craft}</td>
-            </tr>
-          )
-        })}
+        <tbody>
+          {astronauts.people.map((astronaut) => {
+            return (
+              <tr>
+                <td>{astronaut.name}</td>
+                <td>{astronaut.craft}</td>
+              </tr>
+            );
+          })}
         </tbody>
-      </table>
+      </table><IssLocation setIsLoaded={setIsLoaded} isLoaded={isLoaded}/></>
     );
   } else {
     return <p>Loading ... </p>;
