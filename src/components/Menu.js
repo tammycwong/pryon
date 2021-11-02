@@ -5,29 +5,43 @@ import Profile from "./Profile";
 import Home from "./Home";
 import Astronauts from "./Astronauts";
 import IssLocation from "./IssLocation";
-import image from "../images/main-logo.png"
-
+import image from "../images/main-logo.png";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Menu() {
+  const { logout, isAuthenticated, loginWithRedirect } = useAuth0();
+
   return (
     <div className="menu">
-      
       <div className="links">
-      <Link className="" to="/">
-      <img className="logo" src={image} alt=""/>
-      </Link>
-      {/* <Link className="" to="/login">
-        Log In
-      </Link> */}
-      <Link className="" to="/profile">
-        Profile
-      </Link>
-      <Link className="" to="/astronauts">
-        Astronauts
-      </Link>
-      <Link className="" to="/isslocation">
-        ISS Location
-      </Link>
+        <Link className="" to="/">
+          <img className="logo" src={image} alt="" />
+        </Link>
+        <div>
+
+        {!isAuthenticated && 
+          <Link className="" onClick={() => loginWithRedirect()}>Login </Link>}
+
+        {isAuthenticated ? ( 
+          <Link className="" to="/profile">
+            Profile
+          </Link>
+        ) : null }
+
+          {isAuthenticated ? (
+            <Link className="" to="/astronauts">
+              Astronauts
+            </Link>
+          ) : null}
+
+          {isAuthenticated ? (
+            <Link className="" to="/isslocation">
+              ISS Location
+            </Link>
+          ) : null}
+
+          {isAuthenticated && <Link onClick={() => logout()}>Log Out</Link>}
+        </div>
       </div>
 
       <Switch>

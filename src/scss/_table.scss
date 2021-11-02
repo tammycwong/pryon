@@ -1,24 +1,31 @@
-.table-container {
-    margin: 5rem;
+.table {
+  background: black;
 }
 
-table {
+.table-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 150px;
+}
+
+table, td {
     border-collapse: collapse;
-    background: white;
     width: 65vw;
+    border: 1px solid black;
   }
-  th,
+  // th,
   td {
     text-align: left;
     // padding: 5px;
     font-size: 1.3rem;
-    height: 70px;
+    padding: 10px;
   }
   th {
     background-color: #30313d;
-    color: white;
     border: none;
   }
-  tr:nth-child(even) {
-    background: #eeeeee;
+
+  td:nth-child(1){
+    width: 50%;
   }

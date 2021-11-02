@@ -1,14 +1,11 @@
 body {
   margin: 0;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
-// .banner {
-//     width: 500px;
-// }
 .astronaut {
   position: center;
-  background-size: cover;
+  // background-size: cover;
   width: 100vw;
   height: 100vh;
   opacity: 1;
@@ -24,15 +21,15 @@ body {
 .content {
   display: flex;
   flex-direction: row;
-  // max-width: 50vw;
 
   .title {
     font-size: 4rem;
     line-height: 4.5rem;
-    z-index: 15;
+    z-index: 1;
     text-align: center;
     position: fixed;
     color: white;
+    padding: 5rem;
   }
 }
 
@@ -46,11 +43,3 @@ button {
   margin-left: 40px;
   cursor: pointer;
 }
-// .title {
-//   font-size: 4rem;
-//   line-height: 4.5rem;
-//   z-index: 15;
-//   text-align: center;
-//   position: fixed;
-//   color: white;
-// }

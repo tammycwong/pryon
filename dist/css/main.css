@@ -1,39 +1,43 @@
+.table {
+  background: black;
+}
+
 .table-container {
-  margin: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 150px;
 }
 
-table {
+table, td {
   border-collapse: collapse;
-  background: white;
   width: 65vw;
+  border: 1px solid black;
 }
 
-th,
 td {
   text-align: left;
   font-size: 1.3rem;
-  height: 70px;
+  padding: 10px;
 }
 
 th {
   background-color: #30313d;
-  color: white;
   border: none;
 }
 
-tr:nth-child(even) {
-  background: #eeeeee;
+td:nth-child(1) {
+  width: 50%;
 }
 
 body {
   margin: 0;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 .astronaut {
   position: center;
-  background-size: cover;
   width: 100vw;
   height: 100vh;
   opacity: 1;
@@ -60,10 +64,11 @@ body {
 .content .title {
   font-size: 4rem;
   line-height: 4.5rem;
-  z-index: 15;
+  z-index: 1;
   text-align: center;
   position: fixed;
   color: white;
+  padding: 5rem;
 }
 
 button {
@@ -78,14 +83,11 @@ button {
 }
 
 .menu {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: right;
 }
 
 a {
-  padding: 30px;
+  padding: 0px 30px;
   text-decoration: none;
   font-size: 13pt;
   color: white;
@@ -111,10 +113,6 @@ a:hover {
   opacity: 0.98;
 }
 
-.profile {
-  background: black;
-}
-
 .profile-picture {
   width: 200px;
   height: auto;
@@ -122,8 +120,5 @@ a:hover {
 
 * {
   font-family: Helvetica;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: white;
 }
 /*# sourceMappingURL=main.css.map */
