@@ -1,9 +1,10 @@
 @import 'table';
 @import 'home';
 @import 'menu';
-@import 'form';
 @import 'profile';
 
 * {
     font-family: Helvetica;
+    box-sizing: border-box;
+    color: white;
 }

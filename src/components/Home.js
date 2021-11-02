@@ -1,11 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import image from "../images/main.jpg";
 import LoginButton from "./LoginButton";
+import LogoutButton from "./LogoutButton";
+import { useAuth0 } from '@auth0/auth0-react';
 
 
 
 export default function Home() {
+
+  const { isLoading } = useAuth0();
+
+  if (isLoading) return <div>Loading...</div>
 
   return (
     <div className="banner">
@@ -16,7 +22,7 @@ export default function Home() {
             Your up to date International Space Station tracker
           </h1>
           <LoginButton/>
-          <button className="">Sign Up</button>
+          <LogoutButton/>
         </div>
       </div>
     </div>

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link, Switch, Route } from "react-router-dom";
 import Profile from "./Profile";
-import Login from "./Login";
+// import Login from "./Login";
 import Home from "./Home";
 import Astronauts from "./Astronauts";
 import IssLocation from "./IssLocation";
-import SignUp from "./SignUp";
 import image from "../images/main-logo.png"
+
 
 export default function Menu() {
   return (
@@ -16,12 +16,9 @@ export default function Menu() {
       <Link className="" to="/">
       <img className="logo" src={image} alt=""/>
       </Link>
-      <Link className="" to="/signup">
-        Sign Up
-      </Link>
-      <Link className="" to="/login">
+      {/* <Link className="" to="/login">
         Log In
-      </Link>
+      </Link> */}
       <Link className="" to="/profile">
         Profile
       </Link>
@@ -42,9 +39,9 @@ export default function Menu() {
           <Profile />
         </Route>
 
-        <Route exact path="/login">
+        {/* <Route exact path="/login">
           <Login />
-        </Route>
+        </Route> */}
 
         <Route exact path="/astronauts">
           <Astronauts />
@@ -52,10 +49,6 @@ export default function Menu() {
 
         <Route exact path="/isslocation">
           <IssLocation />
-        </Route>
-
-        <Route exact path="/signup">
-          <SignUp/>
         </Route>
       </Switch>
     </div>

@@ -1,17 +1,19 @@
 import React from "react";
 import Menu from "./Menu";
-import Home from "./Home";
-import { useAuth0 } from "@auth0/auth0-react";
+// import { useAuth0 } from "@auth0/auth0-react";
+// import LoginButton from "./LoginButton";
+// import LogoutButton from "./LogoutButton";
 
 export default function App() {
-  const { isLoading } = useAuth0();
+  // const { isLoading } = useAuth0();
 
-  if (isLoading) return <div>Loading...</div>;
+  // if (isLoading) return <div>Loading...</div>;
 
   return (
     <div>
       <Menu />
-      <Home />
+      {/* <LoginButton/>
+          <LogoutButton/> */}
     </div>
   );
 }

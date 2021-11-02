@@ -8,23 +8,23 @@ export default function Profile() {
   const { user, isAuthenticated } = useAuth0();
   return (
     isAuthenticated && (
-    <div className="banner">
+    <div className="profile">
       {/* <img src={image} alt="astronaut" /> */}
-      <div className="overlay">
-        <div className="content">
-          {/* <h1 className="title">
-              Hi Tammy, welcome to your ISS Watch dashboard
-            </h1> */}
+      {/* <div className="overlay">
+        <div className="content"> */}
+          <h1 className="title">
+              Hi {user.name}, welcome to your ISS Watch dashboard
+            </h1>
           {/* {JSON.stringify(user,null,2)} */}
           <img src={user.picture} alt={user.name} className="profile-picture"/>
-          <h2>{user.name}</h2>
+          {/* <h2>{user.name}</h2> */}
           <p>{user.email}</p>
-          <JSONPretty data={user} />
-          <button className="">See Astronauts</button>
+          {/* <JSONPretty data={user} /> */}
+          <Link to="/astronauts"><button className="">See Astronauts</button></Link>
           <button className="">See ISS Position</button>
         </div>
-      </div>
-    </div>
+    //   </div>
+    // </div>
     )
   );
 }

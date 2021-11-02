@@ -81,16 +81,6 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   text-align: right;
 }
 
@@ -121,36 +111,8 @@ a:hover {
   opacity: 0.98;
 }
 
-.form-container {
-  z-index: 0;
-}
-
-h1 {
-  font-size: 36pt;
-  color: gray;
-}
-
-.login-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: absolute;
-}
-
-input {
-  margin-bottom: 20px;
-  width: 40vw;
-  height: 5vh;
-  outline: none;
-}
-
-input[type="submit"] {
-  width: 10vw;
-  border-radius: 8px;
+.profile {
+  background: black;
 }
 
 .profile-picture {
@@ -160,5 +122,8 @@ input[type="submit"] {
 
 * {
   font-family: Helvetica;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
 }
 /*# sourceMappingURL=main.css.map */
