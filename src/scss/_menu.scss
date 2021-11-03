@@ -8,16 +8,14 @@
     font-size: 13pt;
     color: white;
     margin: 20px;
+
+    &:hover {
+      color: gray;
+    }
   
   }
-  
-  a.menu-link:hover {
-    color:gray;
-  }
-  /* .banner {
-    display: flex;
-  } */
-  img.logo {
+
+  .logo {
     width: 10rem;
     padding-left: 1rem;
     height: auto;
