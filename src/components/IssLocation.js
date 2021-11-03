@@ -21,7 +21,7 @@ export default function IssLocation({ setIsLoaded, isLoaded, zoom, center }) {
   if (!isLoading) {
     return (
       <div className="">
-        <img src={image} alt="astronaut" className="astronaut-secondary" />
+        <img src={image} alt="astronaut" className="astronaut" />
         <div className="overlay">
           <div className="content">
             <div className="map">

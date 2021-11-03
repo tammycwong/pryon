@@ -22,10 +22,10 @@ img {
   height: 100vh;
   pointer-events: none;
 }
-
 .astronaut {
   opacity: 0.4;
 }
+
 .overlay {
   top: 10rem;
   left: 0;
@@ -52,7 +52,6 @@ img {
 /* menu */
 .menu {
   text-align: right;
-  /* display: flex; */
 }
 a.menu-link {
   padding: 0px 30px;
@@ -66,12 +65,11 @@ a.menu-link:hover {
   color: gray;
 }
 
-img.logo {
-  width: 10rem;
-  padding-left: 1rem;
-  height: auto;
-  position: fixed;
-  left: 0;
+.logo {
+    width: 10rem;
+    padding-left: 1rem;
+    height: auto;
+    display: flex;
 }
 .links {
   position: absolute;
