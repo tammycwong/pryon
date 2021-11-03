@@ -11,11 +11,12 @@ body {
 }
 
 /* home  */
-.astronaut {
+img {
   position: center;
   width: 100vw;
   height: 100vh;
   pointer-events: none;
+
 }
 .astronaut {
   opacity: 0.4;
@@ -46,7 +47,7 @@ body {
 /* menu */
 .menu {
   text-align: right;
-  display: flex;
+  /* display: flex; */
 }
 a.menu-link {
   padding: 0px 30px;
