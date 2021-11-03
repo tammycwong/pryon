@@ -14,34 +14,44 @@ export default function Menu() {
   return (
     <div className="menu">
       <div className="links">
-        <Link className="" to="/">
-          <img className="logo" src={image} alt="" />
+        <Link className="menu-link" to="/">
+          <img className="logo" src={image} alt="logo" />
         </Link>
-        <div>
+          {!isAuthenticated && (
+            <Link className="menu-link" onClick={() => loginWithRedirect()}>
+              Log In
+            </Link>
+          )}
 
-        {!isAuthenticated && 
-          <Link className="" onClick={() => loginWithRedirect()}>Login </Link>}
-
-        {isAuthenticated ? ( 
-          <Link className="" to="/profile">
-            Profile
-          </Link>
-        ) : null }
+          {!isAuthenticated && (
+            <Link className="menu-link" onClick={() => loginWithRedirect({screen_hint:'signup'})}>
+              Sign Up
+            </Link>
+          )}
 
           {isAuthenticated ? (
-            <Link className="" to="/astronauts">
+            <Link className="menu-link" to="/profile">
+              Profile
+            </Link>
+          ) : null}
+
+          {isAuthenticated ? (
+            <Link className="menu-link" to="/astronauts">
               Astronauts
             </Link>
           ) : null}
 
           {isAuthenticated ? (
-            <Link className="" to="/isslocation">
+            <Link className="menu-link" to="/isslocation">
               ISS Location
             </Link>
           ) : null}
 
-          {isAuthenticated && <Link onClick={() => logout()}>Log Out</Link>}
-        </div>
+          {isAuthenticated && (
+            <Link onClick={() => logout()} className="menu-link">
+              Log Out
+            </Link>
+          )}
       </div>
 
       <Switch>

@@ -8,26 +8,28 @@ export default function Profile() {
   return (
     isAuthenticated && (
       <div className="banner">
-        <img src={image} alt="astronaut" className="astronaut"/>
+        <img src={image} alt="astronaut" className="astronaut" />
         <div className="overlay">
           <div className="content">
             <h1 className="title">
-              Hi {user.name},
-              welcome to your ISS Watch dashboard
+              Hi {user.name}, welcome to your ISS Watch dashboard
             </h1>
-            <img
+            {/* <img
               src={user.picture}
               alt={user.name}
               className="profile-picture"
-            />
+            /> */}
             {/* <h2>{user.name}</h2>
             <p>{user.email}</p> */}
-            <Link to="/astronauts">
-              <button className="">See Astronauts</button>
-            </Link>
-            <Link to="/isslocation">
-              <button className="">See ISS Position</button>
-            </Link>
+
+            <div className="button-container">
+              <Link to="/astronauts">
+                <button className="profile-button-primary">See Astronauts</button>
+              </Link>
+              <Link to="/isslocation">
+                <button className="profile-button">See ISS Position</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

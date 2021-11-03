@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import IssLocation from "./IssLocation"
-
+import image from "../images/main.jpg";
 
 export default function Astronauts() {
   const [astronauts, setAstronauts] = useState({});
@@ -15,28 +14,34 @@ export default function Astronauts() {
       });
   }, [setAstronauts]);
 
-
   if (isLoaded) {
     return (
-      <><table className="">
-        <thead className="">
-          <tr>
-            <th>Name</th>
-            <th>Craft</th>
-          </tr>
-        </thead>
+      <div className="table-container">
+        <img src={image} alt="astronaut" className="astronaut-secondary" />
+        <div className="overlay">
+          <div className="content">
+        <table className="">
+          <thead className="">
+            <tr>
+              <th>Name</th>
+              <th>Craft</th>
+            </tr>
+          </thead>
 
-        <tbody>
-          {astronauts.people.map((astronaut) => {
-            return (
-              <tr>
-                <td>{astronaut.name}</td>
-                <td>{astronaut.craft}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table><IssLocation setIsLoaded={setIsLoaded} isLoaded={isLoaded}/></>
+          <tbody>
+            {astronauts.people.map((astronaut) => {
+              return (
+                <tr>
+                  <td>{astronaut.name}</td>
+                  <td>{astronaut.craft}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+        </div>
+        </div>
+      </div>
     );
   } else {
     return <p>Loading ... </p>;

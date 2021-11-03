@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import GoogleMapReact from "google-map-react";
 import pin from "../images/pin.png";
+import image from "../images/main.jpg";
 
 export default function IssLocation({ setIsLoaded, isLoaded, zoom, center }) {
   const [isLoading, setIsLoading] = useState(false);
@@ -19,22 +20,29 @@ export default function IssLocation({ setIsLoaded, isLoaded, zoom, center }) {
 
   if (!isLoading) {
     return (
-      <div className="map">
-        <GoogleMapReact
-          boostrapURLKeys={{
-            key: "AIzaSyCqbcmEEYfn_MhRM-ax_ukDrr0-efbJqsw",
-          }}
-          defaultCenter={center}
-          defaultZoom={zoom}
-        >
-          <img
-            src={pin}
-            alt="Pin Icon"
-            className="pin-icon"
-            lat={center.lat}
-            lng={center.lng}
-          />
-        </GoogleMapReact>
+      <div className="">
+        <img src={image} alt="astronaut" className="astronaut-secondary" />
+        <div className="overlay">
+          <div className="content">
+            <div className="map">
+              <GoogleMapReact
+                boostrapURLKeys={{
+                  key: "AIzaSyCqbcmEEYfn_MhRM-ax_ukDrr0-efbJqsw",
+                }}
+                defaultCenter={center}
+                defaultZoom={zoom}
+              >
+                <img
+                  src={pin}
+                  alt="Pin Icon"
+                  className="pin-icon"
+                  lat={center.lat}
+                  lng={center.lng}
+                />
+              </GoogleMapReact>
+            </div>
+          </div>
+        </div>
       </div>
     );
   } else {
