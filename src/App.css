@@ -10,6 +10,11 @@ body {
   overflow-y: hidden;
 }
 
+.loading {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
 /* home  */
 img {
   position: center;

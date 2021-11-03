@@ -7,7 +7,7 @@ export default function Home() {
 
   const { isLoading } = useAuth0();
 
-  if (isLoading) return <div>Loading...</div>
+  if (isLoading) return <div className="loading">Loading...</div>
 
   return (
     <div className="banner">
