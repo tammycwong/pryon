@@ -14,17 +14,12 @@ export default function Profile() {
             <h1 className="title">
               Hi {user.name}, welcome to your ISS Watch dashboard
             </h1>
-            {/* <img
-              src={user.picture}
-              alt={user.name}
-              className="profile-picture"
-            /> */}
-            {/* <h2>{user.name}</h2>
-            <p>{user.email}</p> */}
 
             <div className="button-container">
               <Link to="/astronauts">
-                <button className="profile-button-primary">See Astronauts</button>
+                <button className="profile-button-primary">
+                  See Astronauts
+                </button>
               </Link>
               <Link to="/isslocation">
                 <button className="profile-button">See ISS Position</button>

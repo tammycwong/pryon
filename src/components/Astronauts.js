@@ -20,26 +20,26 @@ export default function Astronauts() {
         <img src={image} alt="astronaut" className="astronaut-secondary" />
         <div className="overlay">
           <div className="content">
-        <table className="">
-          <thead className="">
-            <tr>
-              <th>Name</th>
-              <th>Craft</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {astronauts.people.map((astronaut) => {
-              return (
+            <table className="">
+              <thead className="">
                 <tr>
-                  <td>{astronaut.name}</td>
-                  <td>{astronaut.craft}</td>
+                  <th>Name</th>
+                  <th>Craft</th>
                 </tr>
-              );
-            })}
-          </tbody>
-        </table>
-        </div>
+              </thead>
+
+              <tbody>
+                {astronauts.people.map((astronaut) => {
+                  return (
+                    <tr key={astronaut.name}>
+                      <td>{astronaut.name}</td>
+                      <td>{astronaut.craft}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     );

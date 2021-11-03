@@ -14,7 +14,11 @@ export default function Menu() {
         </Link>
 
         {!isAuthenticated && (
-          <Link className="menu-link" onClick={() => loginWithRedirect()}>
+          <Link
+            className="menu-link"
+            onClick={() => loginWithRedirect()}
+            to="#"
+          >
             Log In
           </Link>
         )}
@@ -23,6 +27,7 @@ export default function Menu() {
           <Link
             className="menu-link"
             onClick={() => loginWithRedirect({ screen_hint: "signup" })}
+            to="#"
           >
             Sign Up
           </Link>
@@ -47,7 +52,7 @@ export default function Menu() {
         ) : null}
 
         {isAuthenticated && (
-          <Link onClick={() => logout()} className="menu-link">
+          <Link onClick={() => logout()} className="menu-link" to="#">
             Log Out
           </Link>
         )}

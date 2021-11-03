@@ -21,8 +21,8 @@ img {
   width: 100vw;
   height: 100vh;
   pointer-events: none;
-
 }
+
 .astronaut {
   opacity: 0.4;
 }
@@ -66,7 +66,7 @@ a.menu-link:hover {
   color: gray;
 }
 
-.logo {
+img.logo {
   width: 10rem;
   padding-left: 1rem;
   height: auto;
@@ -85,7 +85,6 @@ table {
   margin: 0 auto;
   padding: 0 auto;
   position: relative;
-  top: 4rem;
 }
 
 table,
@@ -145,7 +144,6 @@ button:hover {
 .pin-icon {
   width: 40px;
   height: auto;
-
 }
 
 .profile-button-primary:hover {
