@@ -20,4 +20,4 @@
 - react router dom
 
 ### Check out the site!
-<a href="https://isswatch.netlify.app/" target=_blank>https://isswatch.netlify.app/</a>
+<a href="https://isswatch.netlify.app/" target="_blank">https://isswatch.netlify.app/</a>
