@@ -1,28 +1,32 @@
 .menu {
     text-align: right;
-    background: black;
-}
-a {
+    display: flex;
+  }
+  a.menu-link {
     padding: 0px 30px;
     text-decoration: none;
     font-size: 13pt;
     color: white;
-
-    &:hover {
-        color:lightgray;
-    }
-}
-.logo {
+    margin: 20px;
+  
+  }
+  
+  a.menu-link:hover {
+    color:gray;
+  }
+  /* .banner {
+    display: flex;
+  } */
+  img.logo {
     width: 10rem;
     padding-left: 1rem;
     height: auto;
     position: fixed;
     left: 0;
-}
-.links {
+  }
+  .links {
     position: absolute;
     top: 3rem;
     left: 0;
     width: 100vw;
-    opacity: 0.98;
-}
+  }

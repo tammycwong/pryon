@@ -1,14 +1,11 @@
-body {
-  margin: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-.astronaut {
+img {
   position: center;
-  // background-size: cover;
   width: 100vw;
   height: 100vh;
-  opacity: 1;
+  pointer-events: none;
+}
+.astronaut {
+  opacity: 0.4;
 }
 .overlay {
   top: 10rem;
@@ -21,25 +18,41 @@ body {
 .content {
   display: flex;
   flex-direction: row;
+}
 
-  .title {
-    font-size: 4rem;
-    line-height: 4.5rem;
-    z-index: 1;
-    text-align: center;
-    position: fixed;
-    color: white;
-    padding: 5rem;
-  }
+.title {
+  font-size: 4rem;
+  line-height: 4.5rem;
+  z-index: 1;
+  text-align: center;
+  position: fixed;
+  color: white;
+  padding: 5rem;
 }
 
 button {
   border-radius: 10px;
-  width: 7rem;
-  height: 3rem;
+  width: 10rem;
+  height: 4.5rem;
   background: black;
   color: white;
   border: none;
   margin-left: 40px;
   cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.profile-button-primary {
+  background: #2BE793;
+  color: black;
+
+}
+
+.button-container {
+  position: relative;
+  top: 20rem;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+
 }

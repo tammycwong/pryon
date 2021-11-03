@@ -4,6 +4,14 @@
 @import "profile";
 @import "isslocation";
 
-* {
+html {
   font-family: Helvetica;
+  font-size: 1rem;
+  background: black;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }

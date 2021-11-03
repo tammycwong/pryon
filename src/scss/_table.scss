@@ -1,31 +1,30 @@
-.table {
-  background: black;
+table {
+  margin: 0 auto;
+  padding: 0 auto;
+  position: relative;
+  top: 4rem;
 }
 
-.table-container {
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    top: 150px;
+table,
+td {
+  border-collapse: collapse;
+  width: 65vw;
+  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, .2)
+}
+th,
+td {
+  text-align: left;
+  padding: 5px;
+  font-size: 1.3rem;
+  padding: 10px;
+  color: white;
+}
+th {
+  text-align: center;
+  color: gray;
 }
 
-table, td {
-    border-collapse: collapse;
-    width: 65vw;
-    border: 1px solid black;
-  }
-  // th,
-  td {
-    text-align: left;
-    // padding: 5px;
-    font-size: 1.3rem;
-    padding: 10px;
-  }
-  th {
-    background-color: #30313d;
-    border: none;
-  }
-
-  td:nth-child(1){
-    width: 50%;
-  }
+img.astronaut-secondary {
+  opacity: 0.15;
+}

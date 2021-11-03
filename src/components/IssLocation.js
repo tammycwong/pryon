@@ -55,5 +55,5 @@ IssLocation.defaultProps = {
     lat: 74.006,
     lng: 40.7128,
   },
-  zoom: 3,
+  zoom: 4,
 };

@@ -1,11 +1,10 @@
 import React from "react";
 import { Link, Switch, Route } from "react-router-dom";
 import Profile from "./Profile";
-// import Login from "./Login";
 import Home from "./Home";
 import Astronauts from "./Astronauts";
 import IssLocation from "./IssLocation";
-import image from "../images/main-logo.png";
+import logo from "../images/main-logo.png";
 import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Menu() {
@@ -14,9 +13,11 @@ export default function Menu() {
   return (
     <div className="menu">
       <div className="links">
+
         <Link className="menu-link" to="/">
-          <img className="logo" src={image} alt="logo" />
+          <img className="logo" src={logo} alt="logo" />
         </Link>
+
           {!isAuthenticated && (
             <Link className="menu-link" onClick={() => loginWithRedirect()}>
               Log In
