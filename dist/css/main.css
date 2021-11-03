@@ -1,46 +1,45 @@
-.table {
-  background: black;
-}
-
-.table-container {
-  margin-left: auto;
-  margin-right: auto;
+table {
+  margin: 0 auto;
+  padding: 0 auto;
   position: relative;
-  top: 150px;
+  top: 4rem;
 }
 
-table, td {
+table,
+td {
   border-collapse: collapse;
   width: 65vw;
-  border: 1px solid black;
+  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+th,
 td {
   text-align: left;
+  padding: 5px;
   font-size: 1.3rem;
   padding: 10px;
+  color: white;
 }
 
 th {
-  background-color: #30313d;
-  border: none;
+  text-align: center;
+  color: gray;
 }
 
-td:nth-child(1) {
-  width: 50%;
+img.astronaut-secondary {
+  opacity: 0.15;
 }
 
-body {
-  margin: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-.astronaut {
+img {
   position: center;
   width: 100vw;
   height: 100vh;
-  opacity: 1;
+  pointer-events: none;
+}
+
+.astronaut {
+  opacity: 0.4;
 }
 
 .overlay {
@@ -61,7 +60,7 @@ body {
           flex-direction: row;
 }
 
-.content .title {
+.title {
   font-size: 4rem;
   line-height: 4.5rem;
   z-index: 1;
@@ -71,31 +70,23 @@ body {
   padding: 5rem;
 }
 
-button {
-  border-radius: 10px;
-  width: 7rem;
-  height: 3rem;
-  background: black;
-  color: white;
-  border: none;
-  margin-left: 40px;
-  cursor: pointer;
-}
-
 .menu {
   text-align: right;
-  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-a {
+a.menu-link {
   padding: 0px 30px;
   text-decoration: none;
   font-size: 13pt;
   color: white;
+  margin: 20px;
 }
 
-a:hover {
-  color: lightgray;
+a.menu-link:hover {
+  color: gray;
 }
 
 .logo {
@@ -111,19 +102,49 @@ a:hover {
   top: 3rem;
   left: 0;
   width: 100vw;
-  opacity: 0.98;
 }
 
-.profile-picture {
-  width: 200px;
-  height: auto;
+button {
+  border-radius: 10px;
+  width: 10rem;
+  height: 4.5rem;
+  background: black;
+  color: white;
+  border: none;
+  margin-left: 40px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+button:hover {
+  background: #030d00;
+}
+
+.profile-button-primary {
+  background: #2BE793;
+  color: black;
+}
+
+.profile-button-primary:hover {
+  background: #93FFCF;
+}
+
+.button-container {
+  position: relative;
+  top: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .map {
-  width: 50vw;
-  height: 50vh;
+  width: 60vw;
+  height: 70vh;
   margin: 0 auto;
   padding: 0 auto;
+  position: relative;
 }
 
 .pin-icon {
@@ -131,7 +152,15 @@ a:hover {
   height: auto;
 }
 
-* {
+html {
   font-family: Helvetica;
+  font-size: 1rem;
+  background: black;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 /*# sourceMappingURL=main.css.map */
