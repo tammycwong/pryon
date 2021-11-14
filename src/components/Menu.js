@@ -33,29 +33,34 @@ export default function Menu() {
           </Link>
         )}
 
-        {isAuthenticated ? (
+        {/* if not authenticated, render link */}
+
+        {isAuthenticated && (
           <Link className="menu-link" to="/profile">
             Profile
           </Link>
-        ) : null}
+        ) }
 
-        {isAuthenticated ? (
+
+        {isAuthenticated && (
           <Link className="menu-link" to="/astronauts">
             Astronauts
           </Link>
-        ) : null}
+        ) }
 
-        {isAuthenticated ? (
+        {isAuthenticated && (
           <Link className="menu-link" to="/isslocation">
             ISS Location
           </Link>
-        ) : null}
+        )}
 
         {isAuthenticated && (
           <Link onClick={() => logout()} className="menu-link" to="#">
             Log Out
           </Link>
         )}
+
+        {/* if authenticated, render those links that's what the && means*/}
       </div>
     </div>
   );

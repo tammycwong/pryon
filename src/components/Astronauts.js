@@ -2,17 +2,18 @@ import React, { useState, useEffect } from "react";
 import image from "../images/main.jpg";
 
 export default function Astronauts() {
-  const [astronauts, setAstronauts] = useState({});
+  const [astronauts, setAstronauts] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     fetch("http://api.open-notify.org/astros.json")
       .then((r) => r.json())
       .then((data) => {
+        console.log(data);
         setAstronauts(data);
         setIsLoaded(true);
       });
-  }, [setAstronauts]);
+  });
 
   if (isLoaded) {
     return (
@@ -20,8 +21,8 @@ export default function Astronauts() {
         <img src={image} alt="astronaut" className="astronaut-secondary" />
         <div className="overlay">
           <div className="content">
-            <table className="">
-              <thead className="">
+            <table className="astronaut-table">
+              <thead className="astronaut-table-header">
                 <tr>
                   <th>Name</th>
                   <th>Craft</th>

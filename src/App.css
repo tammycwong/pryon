@@ -51,8 +51,9 @@ img {
 
 /* menu */
 .menu {
-  text-align: right;
+  text-align: right; 
 }
+
 a.menu-link {
   padding: 0px 30px;
   text-decoration: none;
@@ -65,6 +66,10 @@ a.menu-link:hover {
   color: gray;
 }
 
+.links > .menu-link {
+  flex-direction: right;
+} 
+
 .logo {
     width: 10rem;
     padding-left: 1rem;
@@ -76,6 +81,7 @@ a.menu-link:hover {
   top: 3rem;
   left: 0;
   width: 100vw;
+  display: flex;
 }
 
 /* table */

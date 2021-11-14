@@ -3,20 +3,24 @@ import GoogleMapReact from "google-map-react";
 import pin from "../images/pin.png";
 import image from "../images/main.jpg";
 
-export default function IssLocation({ setIsLoaded, isLoaded, zoom, center }) {
+export default function IssLocation({ zoom, center }) {
   const [isLoading, setIsLoading] = useState(false);
   const [longitude, setLongitude] = useState(40.7128);
   const [latitude, setLatitude] = useState(74.006);
+
+  // const googleApiKey="AIzaSyCqbcmEEYfn_MhRM-ax_ukDrr0-efbJqsw";
 
   useEffect(() => {
     fetch("http://api.open-notify.org/iss-now.json")
       .then((r) => r.json())
       .then((data) => {
-        setLongitude(data.iss_position.longitude);
-        setLatitude(data.iss_position.latitude);
+        setLongitude(longitude);
+        setLatitude(latitude);
         setIsLoading(false);
       });
-  }, []);
+  });
+
+  //longitude and latitude in dependency array, otherwise remove
 
   if (!isLoading) {
     return (
@@ -27,7 +31,7 @@ export default function IssLocation({ setIsLoaded, isLoaded, zoom, center }) {
             <div className="map">
               <GoogleMapReact
                 boostrapURLKeys={{
-                  key: "AIzaSyCqbcmEEYfn_MhRM-ax_ukDrr0-efbJqsw",
+                  key: process.env.REACT_APP_GOOGLE_MAP_KEY,
                 }}
                 defaultCenter={center}
                 defaultZoom={zoom}
