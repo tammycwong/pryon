@@ -10,10 +10,10 @@ body {
   overflow-y: hidden;
 }
 
-.loading {
+/* .loading {
   text-align: center;
   font-size: 2.5rem;
-}
+} */
 
 /* home  */
 img {
@@ -51,7 +51,7 @@ img {
 
 /* menu */
 .menu {
-  text-align: right; 
+  display: flex;
 }
 
 a.menu-link {
@@ -66,10 +66,6 @@ a.menu-link:hover {
   color: gray;
 }
 
-.links > .menu-link {
-  flex-direction: right;
-} 
-
 .logo {
     width: 10rem;
     padding-left: 1rem;
@@ -78,10 +74,9 @@ a.menu-link:hover {
 }
 .links {
   position: absolute;
-  top: 3rem;
-  left: 0;
-  width: 100vw;
+  text-align: right;
   display: flex;
+  right: 0;
 }
 
 /* table */
@@ -135,6 +130,11 @@ button:hover {
 .profile-button-primary {
   background: #2be793;
   color: black;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* isslocation */

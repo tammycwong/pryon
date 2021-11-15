@@ -9,11 +9,23 @@ export default function Astronauts() {
     fetch("http://api.open-notify.org/astros.json")
       .then((r) => r.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setAstronauts(data);
         setIsLoaded(true);
       });
-  });
+  }, []);
+
+  // const url = "http://api.open-notify.org/astros.json";
+
+  // const data = async () => {
+  //   const response = await fetch(url);
+  //   const astronauts = await response.json();
+  //   setAstronauts(astronauts)
+  // }
+
+  // useEffect(() => {
+  //   data();
+  // }, [])
 
   if (isLoaded) {
     return (
@@ -45,6 +57,6 @@ export default function Astronauts() {
       </div>
     );
   } else {
-    return <p>Loading ... </p>;
+    return <p className="loading">Loading ... </p>;
   }
 }

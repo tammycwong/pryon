@@ -8,8 +8,6 @@ export default function IssLocation({ zoom, center }) {
   const [longitude, setLongitude] = useState(40.7128);
   const [latitude, setLatitude] = useState(74.006);
 
-  // const googleApiKey="AIzaSyCqbcmEEYfn_MhRM-ax_ukDrr0-efbJqsw";
-
   useEffect(() => {
     fetch("http://api.open-notify.org/iss-now.json")
       .then((r) => r.json())

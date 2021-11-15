@@ -8,11 +8,13 @@ export default function Menu() {
 
   return (
     <div className="menu">
-      <div className="links">
-        <Link className="menu-link" to="/">
-          <img className="logo" src={logo} alt="logo" />
-        </Link>
+      {/* <div className="overlay">
+        <div className="content"> */}
+      <Link className="menu-link" to="/">
+        <img className="logo" src={logo} alt="logo" />
+      </Link>
 
+      <div className="links">
         {!isAuthenticated && (
           <Link
             className="menu-link"
@@ -39,14 +41,13 @@ export default function Menu() {
           <Link className="menu-link" to="/profile">
             Profile
           </Link>
-        ) }
-
+        )}
 
         {isAuthenticated && (
           <Link className="menu-link" to="/astronauts">
             Astronauts
           </Link>
-        ) }
+        )}
 
         {isAuthenticated && (
           <Link className="menu-link" to="/isslocation">
@@ -63,5 +64,7 @@ export default function Menu() {
         {/* if authenticated, render those links that's what the && means*/}
       </div>
     </div>
+    // </div>
+    // </div>
   );
 }

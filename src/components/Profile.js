@@ -14,6 +14,7 @@ export default function Profile() {
             <h1 className="title">
               Hi {user.name}, welcome to your ISS Watch dashboard
             </h1>
+            </div>
 
             <div className="button-container">
               <Link to="/astronauts">
@@ -24,7 +25,6 @@ export default function Profile() {
               <Link to="/isslocation">
                 <button className="profile-button">See ISS Position</button>
               </Link>
-            </div>
           </div>
         </div>
       </div>
