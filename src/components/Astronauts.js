@@ -13,7 +13,8 @@ export default function Astronauts() {
         setAstronauts(data);
         setIsLoaded(true);
       });
-  });
+  }, []);
+  //removed dependency array
 
   if (isLoaded) {
     return (
